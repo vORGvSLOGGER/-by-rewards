@@ -9,6 +9,7 @@ module.exports = {
           700: '#050B16'
         },
         'accent-indigo': '#4F46E5',
+        'accent-gold': '#4F46E5',
         'accent-green': '#00A676',
         'accent-purple': '#4B0082'
       },
