@@ -1,13 +1,15 @@
 interface StatsCardProps {
-  label: string;
+  label?: string;
+  title?: string;
   value: string;
 }
 
-export default function StatsCard({ label, value }: StatsCardProps) {
+export default function StatsCard({ label, title, value }: StatsCardProps) {
+  const displayTitle = title || label || '';
   return (
-    <div className="rounded-md bg-primary/80 border border-primary-700 p-6 text-center">
-      <p className="text-3xl font-extrabold text-accent-gold">{value}</p>
-      <p className="text-gray-400 mt-2 text-sm">{label}</p>
+    <div className="glass-card card-hover rounded-3xl p-5 text-center">
+      <div className="text-3xl font-black text-white mb-2">{value}</div>
+      <div className="text-sm text-slate-400">{displayTitle}</div>
     </div>
   );
 }
